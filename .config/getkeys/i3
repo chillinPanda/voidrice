@@ -13,7 +13,7 @@ This is a partial key list.
 	=	+ vol		++ vol
 	+	+ vol		++ vol
 	q	kill win	kill win
-	w	browser		browser
+	w	browser		nmtui (wlan)
 	e	neomutt		tutorials
 	r	ranger		winresize
 	t	toggle hor/vert	gaps=15px
