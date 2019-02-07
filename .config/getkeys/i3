@@ -17,7 +17,7 @@ This is a partial key list.
 	e	neomutt		tutorials
 	r	ranger		winresize
 	t	toggle hor/vert	gaps=15px
-	y	calcurse	resize left
+	z	calcurse	resize left
 	u	dropdown term	resize down
 	i	htop		resize up
 	o	sticky win	resize right
@@ -36,7 +36,7 @@ This is a partial key list.
 	l	focus right	move win right
 	;	right workspace
 	'	fast right win
-	z	+ outer gaps	- outer gaps
+	y	+ outer gaps	- outer gaps
 	x	lock screen	shutdown
 	c			webcam
 	v
