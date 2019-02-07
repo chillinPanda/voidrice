@@ -34,7 +34,8 @@ This is a partial key list.
 	j	focus down	move win down
 	k	focus up	move win up
 	l	focus right	move win right
-	;	right workspace
+	;	left workspace
+	.	right workspace
 	'	fast right win
 	y	+ outer gaps	- outer gaps
 	x	lock screen	shutdown
@@ -45,6 +46,5 @@ This is a partial key list.
 	m	ncmpcpp		mute audio
 	,	previous song	restart song
 	<	previous song	restart song
-	.	next song
 	>	next song
 	/,?	fast win below	kill win
