@@ -21,7 +21,8 @@ alias ka="killall" \
 	YT="youtube-viewer" \
 	ref="shortcuts >/dev/null; source ~/.shortcuts" \
 	upc="sudo pacman -Syu; pkill -RTMIN+8 i3blocks" \
-	lsp="pacman -Qett --color=always | less"
+	lsp="pacman -Qett --color=always | less" \
+	ll="ls -la"
 
 command -v nvim >/dev/null && alias vimdiff="nvim -d" # Use neovim for vimdiff if present.
 
