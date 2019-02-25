@@ -59,6 +59,7 @@ in vim or another program.
 - `tpb` -- Search Pirate Bay for the certain search terms given as arguments.
 - `texclear` -- Remove all `.tex` related build files. This is run by my vim when I stop editing any `.tex` file.
 - `transadd` -- The mimeapp default script for handling torrent magnet links. Starts `transmission-daemon` if not running and adds the link.
+- `where` -- Determines a command's location and offers options via dmenu like editing the command's file or open the command's folder in a filebrowser or new terminal.
 
 ## `i3cmds`
 

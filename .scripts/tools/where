@@ -1,0 +1,44 @@
+#!/bin/sh
+#
+# Determines a command's location and offers options via dmenu like editing the
+# command's file or open the command's folder in a filebrowser or new terminal.
+#
+# This script uses environment variables:
+#   - $EDITOR for opening the file
+#   - $TERMINAL for opening a new terminal
+#   - $FILE for opening the filemanager
+
+options="[0] edit file                 (<PATH>)
+[1] open dir in new terminal  (<DIR>)
+[2] open dir in filebrowser   (<DIR>)"
+
+# path to command
+path=$(whereis -b $1 | awk '{print $2}')
+
+if [ -z "$path" ]; then
+    echo "could not find file location for $1"
+else
+    # compute directory and escaping
+    dir=$(echo "$path" | sed "s/\/[^/]*$//")
+    dir_escaped=$(echo "$dir" | sed 's/\//\\\//g')
+    path_escaped=$(echo "$path" | sed 's/\//\\\//g')
+
+    # dmenu call
+    chosen=$(echo "$options" |
+	    sed "s/<DIR>/$dir_escaped/g" |
+	    sed "s/<PATH>/$path_escaped/" |
+	    dmenu -i -l 5 -p "$path")
+
+    case "$chosen" in
+        *[0]*)
+	    $EDITOR $path
+	    ;;
+        *[1]*)
+            cd "$dir"
+            exec "$TERMINAL"
+	    ;;
+	*[2]*)
+	    $FILE "$dir"
+	    ;;
+    esac
+fi
